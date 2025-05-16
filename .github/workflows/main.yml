@@ -25,7 +25,7 @@ jobs:
       - name: Run Tests without skggm
         run:  |
           sudo apt-get install liblapack-dev
-          pip install --upgrade pip pytest
+          pip install --upgrade pip pytest 
           pip install wheel cython numpy scipy codecov pytest-cov scikit-learn
           pytest test --cov --doctest-modules
           bash <(curl -s https://codecov.io/bash)
